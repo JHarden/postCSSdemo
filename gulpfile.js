@@ -13,24 +13,24 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var postcss = require('gulp-postcss');
-var csswring = require('csswring');
+var csswring = require('csswring'); //for minifying css
 var autoprefixer = require('autoprefixer-core');
+var cssnext = require('cssnext');
+var precss = require('precss');
 
 
 gulp.task('styles',function(){
     var processors = [
-        csswring,
-        autoprefixer
+        precss({}),autoprefixer({browsers:['last 2 version']}), cssnext({})
     ];
 
-   return gulp.src('styles.scss')
-       .pipe(sass())
+   return gulp.src('styles.css')
        .pipe(postcss(processors))
        .pipe(gulp.dest('./styles/css'));
 });
 
 gulp.task('watch:styles',function(){
-    gulp.watch('**/*.styl', ['styles']);
+    gulp.watch('**/*.css', ['styles']);
 });
 
 

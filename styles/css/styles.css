@@ -1,1 +1,50 @@
-body{background:blue}.test{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.test .inner-test{color:red}
+/*set custom media queries*/
+
+
+body{
+    background:blue;
+    color:blue;
+}
+.test{
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:-webkit-box;
+    display:flex;
+    border-radius: 40%;
+    -webkit-transform: translateX(10px);
+                -ms-transform: translateX(10px);
+            transform: translateX(10px);
+}
+
+/*use custom media queries*/
+@media (min-width: 500px) and (max-width: 1200px){
+
+    .test{
+        font-size: 10px;    
+    }
+}
+
+
+.another-test .wut-nesting-in-css .what-trickery-is-this{
+    color:purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

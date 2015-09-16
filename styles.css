@@ -1,15 +1,48 @@
-body{
-    background: blue;
-    color: green;
+:root{
+    --mainColor: blue;
 }
 
-.test{
-    display: flex;
+/*set custom media queries*/
+@custom-media --only-medium-screen (width >= 500px) and (width <= 1200px);
 
-    .inner-test{
-        color: green;
+
+body{
+    background: var(--mainColor);
+    color: var(--mainColor);
+}
+.test{
+    display:flex;
+    border-radius: 40%;
+    transform: translateX(10px);
+}
+
+/*use custom media queries*/
+@media (--only-medium-screen){
+
+    .test{
+        font-size: 10px;    
     }
 }
+
+.another-test{
+
+    .wut-nesting-in-css{
+
+        .what-trickery-is-this{
+            color:purple;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
