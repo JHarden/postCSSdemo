@@ -1,10 +1,22 @@
 body{
     background: blue;
+    color: green;
 }
 
 .test{
     display: flex;
+
     .inner-test{
-        color: red;
+        color: green;
     }
 }
+
+
+
+
+
+
+
+
+
+
