@@ -1,0 +1,10 @@
+body{
+    background: blue;
+}
+
+.test{
+    display: flex;
+    .inner-test{
+        color: red;
+    }
+}
